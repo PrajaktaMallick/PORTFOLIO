@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "prajakta-portfolio",
+  "builds": [
+    {
+      "src": "interactive-portfolio/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/interactive-portfolio/$1"
+    }
+  ],
+  "functions": {},
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/interactive-portfolio/index.html"
+    }
+  ]
+}
